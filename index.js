@@ -30,16 +30,18 @@ function resetCanvas() {
 
 // Draw a new canvas according to the user Input
 function createCanvas(userInput){
-    // container.style.gridTemplateColumns = repeat(userInput, 1fr);
-    // container.style.gridTemplateRows = repeat(userInput, 1fr);
+    container.style.gridTemplateRows=`repeat(${userInput}, 1fr)`
+    container.style.gridTemplateColumns=`repeat(${userInput}, 1fr)`
+    
     for (let i=0; i<(userInput*userInput); i++){
         let childDiv= document.createElement("div");
         childDiv.classList.add("childDiv")
     
         childDiv.style.backgroundColor ="yellow"
         childDiv.style.borderStyle="solid"
+        // childDiv.style.border=0;
         childDiv.style.margin=0;
-        childDiv.textContent=`${i}`
+        // childDiv.textContent=`${i}`
     
         container.appendChild(childDiv);
         childArray[i]=childDiv;
@@ -57,21 +59,17 @@ resetButton.addEventListener("click",()=>{
     getUserInput();
     resetCanvas();
     createCanvas(userInput);
+    // container.style.gridTemplateRows=`repeat(${userInput}, 1fr)`
+    // container.style.gridTemplateColumns=`repeat(${userInput}, 1fr)`
 }
 )
 
-
-
-
-
 const container = document.querySelector("div")
-// container.style.gridTemplateColumns = repeat(userInput, 1fr);
-// container.style.gridTemplateRows = repeat(userInput, 1fr);
 let childArray=[]
 
 
 //Draw a default canvas
-for (let i=0; i<(256); i++){
+for (let i=0; i<(12*12); i++){
     let childDiv= document.createElement("div");
     childDiv.classList.add("childDiv")
 
