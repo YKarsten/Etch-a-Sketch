@@ -5,8 +5,9 @@
 // Remove Borders and margins as they adjust the size of the boxes?
 
 const container = document.querySelector("div");
+let childArray=[]
 
-for (let i=1;i<=16*16; i++){
+for (let i=0; i<16*16; i++){
     let childDiv= document.createElement("div");
 
     childDiv.style.backgroundColor ="yellow"
@@ -16,4 +17,19 @@ for (let i=1;i<=16*16; i++){
     childDiv.textContent=`${i}`
 
     container.appendChild(childDiv);
+    childArray[i]=childDiv;
 }
+
+// console.log(childArray)
+// console.log(childArray.length)
+
+// Set up a “hover” effect so that the grid divs change color 
+// when your mouse passes over them, leaving a (pixelated) trail 
+// through your grid like a pen would.
+
+childArray.forEach((child) =>{
+    child.addEventListener("mouseover", ()=> {
+        child.style.backgroundColor="black";
+    })
+})
+
