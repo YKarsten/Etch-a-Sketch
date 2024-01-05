@@ -4,4 +4,5 @@
     grid-template-rows: repeat(12, 1fr);
     width: 960px;
     height: 960px;
+    border-style: solid;
 }

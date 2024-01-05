@@ -8,7 +8,6 @@ const resetButton = document.querySelector("button");
 function getUserInput(){
     do {
         userInput = parseInt(prompt("Please enter the size of the new canvas (max supported size is 100x100"))
-        // return userInput;
     } while (userInput > 100 || 
              userInput < 2 || 
              Number.isInteger(userInput) === false);
@@ -30,9 +29,9 @@ function createCanvas(userInput){
         let childDiv= document.createElement("div");
         childDiv.classList.add("childDiv")
     
-        childDiv.style.backgroundColor ="yellow"
-        childDiv.style.borderStyle="solid"
-        // childDiv.style.border=0;
+        // childDiv.style.backgroundColor ="yellow"
+        // childDiv.style.borderStyle="solid"
+        childDiv.style.border=0;
         childDiv.style.margin=0;
         // childDiv.textContent=`${i}`
     
